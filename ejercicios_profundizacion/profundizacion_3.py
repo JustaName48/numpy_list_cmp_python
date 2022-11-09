@@ -62,5 +62,18 @@ if __name__ == '__main__':
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
 
+    
+    lista_compra_productos = [producto[k] if k in producto else "NaN" for k in lista_compra_id ]
+    print(lista_compra_productos) # No pude hacerlo con "get", para hacerlo busqué como usar diccionarios con comprensión
+                                  # de listas 
 
     print("terminamos")
+
+#items(): Devuelve los pares (clave, valor) del dict
+#print(mi_dict.items())
+
+#keys(): Devuelve una lista con todas las claves del dict
+#print(mi_dict.keys())
+
+#values(): Devuelve una lista con todos los valores del dict
+#print(mi_dict.values())
