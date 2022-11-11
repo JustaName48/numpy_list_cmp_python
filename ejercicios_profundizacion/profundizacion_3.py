@@ -61,11 +61,16 @@ if __name__ == '__main__':
 
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
-
     
-    lista_compra_productos = [producto[k] if k in producto else "NaN" for k in lista_compra_id ]
-    print(lista_compra_productos) # No pude hacerlo con "get", para hacerlo busqué como usar diccionarios con comprensión
-                                  # de listas 
+    # METODO 1:
+
+    lista_compra_productos1 = [producto[k] if k in producto else "NaN" for k in lista_compra_id ]
+    print(lista_compra_productos1) 
+
+    # # METODO 2:
+
+    lista_compra_productos2 = [producto.get(x, 'NaN') for x in lista_compra_id] 
+    print(lista_compra_productos2) 
 
     print("terminamos")
 
